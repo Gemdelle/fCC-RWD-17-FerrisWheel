@@ -1,0 +1,417 @@
+body {
+  background-color: #c1adcc;
+  background-image: url(Images/Background.png);
+  background-size: cover;
+  background-position: top;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: 'Satisfy', cursive;
+}
+
+.star {
+  width: 8%;
+  height: 8%;
+  background-image: url(Images/star.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  left: 2.2vw;
+  top: 5vw;
+  animation: 4s linear infinite swing;
+}
+
+.star-02 {
+  width: 3%;
+  height: 3%;
+  background-image: url(Images/star.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  right: 2.2vw;
+  top: 5.8vw;
+  animation: 3s linear infinite swing;
+}
+
+.moon {
+  width: 10%;
+  height: 10%;
+  background-image: url(Images/moon.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  right: 2.2vw;
+  top: 5.5vw;
+  animation: 5s linear infinite swing;
+}
+
+.upper-container {
+  width: 50%;
+  height: 25vw;
+  margin-left: 10%;
+  margin-top: 3%;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.friends-container {
+  width: 80%;
+  height: 18vw;
+  margin: 0 auto;
+  margin-top: 2%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.introduction {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.question-box {
+  width: 67%;
+  height: 90%;
+  background-color: bisque;
+  margin-right: 4vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-items: top;
+}
+
+.questionnaire {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.no-display {
+  display: none;
+}
+
+/* Questions START */
+
+.guardian {
+  width: 45%;
+  height: 90%;
+  background-image: url(Giphs/Guardian.gif);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: -3vw;
+  top: 2vw;
+}
+
+.question-frame {
+  background-image: url(Images/question-frame.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 85%;
+  height: 85%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+input {
+  margin: 1vw;
+  font-family: 'Satisfy', cursive;
+  font-style: italic;
+  text-align: center;
+}
+
+#next {
+  width: 20%;
+  height: 20%;
+  background-color: gray;
+  cursor: pointer;
+  text-align: center;
+}
+
+.question {
+  background-image: url(Images/question.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1vw;
+}
+
+.key-container {
+  position: absolute;
+  background-color: red;
+  width: 10%;
+  height: 20%;
+  bottom: 88%;
+  right: -4%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.key-image-count {
+  height: 50%;
+  width: 50%;
+  background-color: blue;
+}
+
+.key {
+  width: 15%;
+  height: 25%;
+  transition: all 300ms ease-in-out;
+  margin-top: 1.5vw;
+}
+
+.disappear {
+  opacity: 0%;
+}
+
+.key:hover {
+  transform: scale(110%);
+}
+
+.key-image {
+  width: 100%;
+  height: 100%;
+  background-image: url(Images/Key.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.answer-01,
+.answer-02,
+.answer-03 {
+  width: 50%;
+  height: 9%;
+  margin: 0.3vw 0;
+  background-color: darkgray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* Questions END */
+
+/* Wheel START */
+
+.wheel {
+  border-radius: 50%;
+  margin-left: 50px;
+  position: absolute;
+  left: 64%;
+  top: 6%;
+  height: 20vw;
+  width: 20vw;
+  animation-name: wheel;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  border: 10px double #efdbff;
+}
+
+.line {
+  width: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: 0% 0%;
+  border: 5px double #F8EFFF;
+}
+
+.line:nth-of-type(2) {
+  transform: rotate(60deg);
+}
+
+.line:nth-of-type(3) {
+  transform: rotate(120deg);
+}
+
+.line:nth-of-type(4) {
+  transform: rotate(180deg);
+}
+
+.line:nth-of-type(5) {
+  transform: rotate(240deg);
+}
+
+.line:nth-of-type(6) {
+  transform: rotate(300deg);
+}
+
+.cabin,
+.open {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  width: 25%;
+  height: 25%;
+  position: absolute;
+  animation: cabins 10s ease-in-out infinite;
+  cursor: pointer;
+}
+
+.cabin {
+  background-image: url(Images/Closed-chest.png);
+}
+
+.open {
+  background-image: url(Images/Open-chest.png);
+  width: 25%;
+  height: 25%;
+}
+
+.cabin:nth-of-type(1) {
+  right: -13%;
+  top: 45%;
+}
+
+.cabin:nth-of-type(2) {
+  right: 13%;
+  top: 89%;
+}
+
+.cabin:nth-of-type(3) {
+  right: 65%;
+  top: 89%;
+}
+
+.cabin:nth-of-type(4) {
+  left: -13%;
+  top: 44%;
+}
+
+.cabin:nth-of-type(5) {
+  left: 14%;
+  top: 0%;
+}
+
+.cabin:nth-of-type(6) {
+  right: 10%;
+  top: 0%;
+}
+
+/* Wheel END */
+
+/* Friends START */
+
+.friend-container {
+  height: 100%;
+  width: 15%;
+  background-image: url(Images/Card.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.friend-01,
+.friend-02,
+.friend-03,
+.friend-04,
+.friend-05,
+.friend-06 {
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 50%;
+  width: 63%;
+  margin-bottom: 0vw;
+  filter: contrast(0%);
+  transition: all 500ms ease-in-out;
+}
+
+.light {
+  filter: contrast(100%);
+}
+
+.light:hover {
+  transform: scale(130%);
+}
+
+.friend-01 {
+  background-image: url(Giphs/Friend-01.gif);
+  height: 50%;
+  width: 84%;
+  margin-bottom: 2vw;
+}
+
+.friend-02 {
+  background-image: url(Giphs/Friend-02.gif);
+}
+
+.friend-03 {
+  background-image: url(Giphs/Friend-03.gif);
+}
+
+.friend-04 {
+  background-image: url(Giphs/Friend-04.gif);
+}
+
+.friend-05 {
+  background-image: url(Giphs/Friend-05.gif);
+  margin-right: 0.5vw;
+}
+
+.friend-06 {
+  background-image: url(Giphs/Friend-06.gif);
+}
+
+/* Friends END */
+
+/* Animations */
+
+@keyframes wheel {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes cabins {
+  0% {
+    transform: rotate(0deg);
+    transform-origin: center;
+  }
+
+  100% {
+    transform: rotate(-360deg);
+    transform-origin: center;
+  }
+}
+
+@keyframes swing {
+
+  0% {
+    transform: rotate(10deg);
+    transform-origin: top center;
+
+  }
+
+  50% {
+    transform: rotate(-10deg);
+  }
+
+  100% {
+    transform: rotate(10deg);
+    transform-origin: top center;
+  }
+}

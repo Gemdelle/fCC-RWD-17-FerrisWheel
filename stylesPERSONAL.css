@@ -1,3 +1,11 @@
+/* Aisling
+Ellide
+Ilayda
+Migine
+Odine
+Willarose
+ */
+
 body {
   background-color: #c1adcc;
   background-image: url(Images/Background.png);
@@ -62,7 +70,6 @@ body {
   width: 80%;
   height: 18vw;
   margin: 0 auto;
-  margin-top: 2%;
   display: flex;
   justify-content: space-between;
 }
@@ -72,13 +79,24 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
+}
+
+.introduction p {
+  font-size: 1.5vw;
+  text-shadow: 0px 0px 10px rgb(255, 151, 238);
+  color: rgb(206, 141, 195);
+}
+
+.introduction span {
+  text-shadow: 0px 0px 10px rgb(255, 151, 238);
+  color: rgb(199, 165, 193);
 }
 
 .question-box {
   width: 67%;
   height: 90%;
-  background-color: bisque;
-  margin-right: 4vw;
+  margin-right: 5vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -88,14 +106,53 @@ body {
 
 .questionnaire {
   width: 100%;
-  height: 100%;
+  height: 70%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
+}
+
+.results {
+  width: 100%;
+  height: 27%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
 .no-display {
   display: none;
+}
+
+.congratulations {
+  position: relative;
+  display: flex;
+}
+
+.congratulations-background {
+  height: 100%;
+  width: 100%;
+  background-image: url(Images/Light.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  animation: 10s wheel linear infinite;
+  position: absolute;
+}
+
+.congratulations p {
+  text-shadow: 0px 0px 10px rgb(255, 151, 238);
+  color: rgb(217, 182, 211);
+  font-size: 2.2vw;
+  text-align: center;
+  animation: none;
+  z-index: 2;
+}
+
+.congratulations span {
+  color: rgb(206, 141, 195);
 }
 
 /* Questions START */
@@ -108,12 +165,12 @@ body {
   background-repeat: no-repeat;
   position: absolute;
   left: -3vw;
-  top: 2vw;
+  top: 1vw;
 }
 
 .question-frame {
   background-image: url(Images/question-frame.png);
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   width: 85%;
   height: 85%;
@@ -124,61 +181,112 @@ body {
 }
 
 input {
-  margin: 1vw;
+  margin-top: 0.4vw;
+  margin-bottom: 2vw;
   font-family: 'Satisfy', cursive;
   font-style: italic;
   text-align: center;
+  border: 3px solid rgb(255, 252, 187);
+  border-radius: 5px;
+  box-shadow: 0px 3px 5px rgb(182, 182, 182);
 }
 
 #next {
   width: 20%;
   height: 20%;
-  background-color: gray;
   cursor: pointer;
   text-align: center;
+  color: rgb(162, 132, 170);
+  transition: all 300ms ease-in-out;
+  z-index: 2;
+}
+
+#next:hover {
+  scale: 115%;
+  color: rgb(101, 67, 110);
+}
+
+.next-background {
+  width: 4vw;
+  height: 4vw;
+  background-image: url(Images/Light.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  bottom: 4.5vw;
+  z-index: 0;
+  animation: 10s linear infinite wheel;
 }
 
 .question {
   background-image: url(Images/question.png);
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
+  background-position: center;
   width: 100%;
-  height: 20%;
+  height: 28%;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 1vw;
 }
 
 .key-container {
   position: absolute;
-  background-color: red;
-  width: 10%;
-  height: 20%;
-  bottom: 88%;
+  background-image: url(Images/Tear.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 13%;
+  height: 22%;
+  bottom: 85%;
   right: -4%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-radius: 50%;
+}
+
+.key-number {
+  color: #977da4;
+  margin-left: 1vw;
+  margin-top: 0.2vw;
 }
 
 .key-image-count {
   height: 50%;
   width: 50%;
-  background-color: blue;
+  background-image: url(Images/Key.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 2;
 }
 
-.key {
-  width: 15%;
-  height: 25%;
-  transition: all 300ms ease-in-out;
-  margin-top: 1.5vw;
+.key-image-count-background {
+  height: 50%;
+  width: 50%;
+  background-image: url(Images/Light.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  bottom: 0.7vw;
+  animation: 10s linear infinite wheel;
 }
 
 .disappear {
   opacity: 0%;
+}
+
+.key {
+  width: 100%;
+  height: 90%;
+  transition: all 300ms ease-in-out;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  margin-top: 1vw;
 }
 
 .key:hover {
@@ -186,24 +294,77 @@ input {
 }
 
 .key-image {
-  width: 100%;
+  width: 30%;
   height: 100%;
   background-image: url(Images/Key.png);
   background-size: contain;
   background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  z-index: 2;
+}
+
+.key-image-background {
+  width: 30%;
+  height: 100%;
+  background-image: url(Images/Light.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  animation: 10s linear infinite wheel;
+}
+
+.next {
+  position: absolute;
+}
+
+.retry {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  background-color: red;
+}
+
+.answers {
+  width: 100%;
+  height: 62%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .answer-01,
 .answer-02,
 .answer-03 {
   width: 50%;
-  height: 9%;
-  margin: 0.3vw 0;
-  background-color: darkgray;
+  height: 18%;
+  background-color: #FFE2F9;
+  border: 3px solid #FDFFD8;
+  border-radius: 5px;
+  color: rgb(95, 47, 90);
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 0.2vw;
   cursor: pointer;
+  transition: all 300ms ease-in-out;
+}
+
+.answer-01:hover,
+.answer-02:hover,
+.answer-03:hover {
+  transform: scale(105%);
+  box-shadow: 0px 0px 10px #e3b9da;
+  background-color: #e3b9da;
+  color: white;
+}
+
+.incorrect {
+  box-shadow: 0px 0px 10px rgb(174, 110, 110);
+  background-color: rgb(101, 54, 54);
+  border: 3px solid rgb(143, 93, 93);
+  color: white;
 }
 
 /* Questions END */

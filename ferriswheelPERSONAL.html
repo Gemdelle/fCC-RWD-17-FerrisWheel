@@ -26,29 +26,41 @@
         <div class="key-container">
           <span class="key-number">0</span>
           <div class="key-image-count"></div>
+          <div class="key-image-count-background"></div>
         </div>
 
-        <div class="introduction">
-          <p>Answer the questions correctly to win a key and unlock a chest. There are many friends waiting for you.</p>
-          <span>Enter your name</span><input type="text" name="myname" id="myname" placeholder="name" required>
+        <!-- <div class="introduction">
+          <p>Answer the questions correctly to win keys and unlock the chests. There are many friends waiting for you!
+          </p>
+          <span>Enter your name</span><input type="text" name="myname" id="myname" placeholder="name">
+          <div class="next-background"></div>
           <div id="next" onclick="nextSection()" for="myname">Next</div>
         </div>
 
         <div class="questionnaire no-display">
           <div class="question"></div>
-          <div class="answer-01" onclick="answer(event)"></div>
-          <div class="answer-02" onclick="answer(event)"></div>
-          <div class="answer-03" onclick="answer(event)"></div>
-
-          <div class="key disappear" onclick="disappear(event)">
-            <div class="key-image"></div>
+          <div class="answers">
+            <div class="answer-01" onclick="answer(event)"></div>
+            <div class="answer-02" onclick="answer(event)"></div>
+            <div class="answer-03" onclick="answer(event)"></div>
           </div>
 
-          <div class="next disappear" onclick="nextQuestion(event)">Next</div>
-
-          <div class="retry disappear" onclick="retry(event)">Retry</div>
         </div>
 
+        <div class="results">
+          <div class="key disappear" onclick="disappear(event)">
+            <div class="key-image"></div>
+            <div class="key-image-background"></div>
+          </div>
+          <div class="next disappear" onclick="nextQuestion(event)">Next</div>
+          <div class="retry disappear" onclick="retry(event)">Retry</div>
+        </div> -->
+
+        <div class="congratulations">
+          <p>Congratulations <br> <span>name</span>, <br>thank you for your help!</p>
+          <div class="congratulations-background"></div>
+        </div>
+        
       </div>
     </div>
   </div>

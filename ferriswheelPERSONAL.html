@@ -1,25 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>Ferris Wheel</title>
-    <link rel="stylesheet" href="./stylesPERSONAL.css">
-  </head>
-  <body>
-    <div class="wheel">
-      <span class="line"></span>
-      <span class="line"></span>
-      <span class="line"></span>
-      <span class="line"></span>
-      <span class="line"></span>
-      <span class="line"></span>
 
-      <div class="cabin"></div>
-      <div class="cabin"></div>
-      <div class="cabin"></div>
-      <div class="cabin"></div>
-      <div class="cabin"></div>
-      <div class="cabin"></div>
+<head>
+  <meta charset="UTF-8">
+  <title>Sweet Friends' Locks</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Abyssinica+SIL&family=Alice&family=Berkshire+Swash&family=Cinzel&family=Delius&family=EB+Garamond&family=Fredericka+the+Great&family=Great+Vibes&family=Gugi&family=Henny+Penny&family=Homemade+Apple&family=IBM+Plex+Serif&family=IM+Fell+English+SC&family=Julius+Sans+One&family=La+Belle+Aurore&family=Lemonada&family=Macondo&family=Old+Standard+TT:ital@0;1&family=Pinyon+Script&family=Rubik+Marker+Hatch&family=Rubik+Microbe&family=Satisfy&family=Tangerine&family=Titillium+Web&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="./stylesPERSONAL.css">
+</head>
+
+<body>
+
+  <div class="star"></div>
+  <div class="star-02"></div>
+  <div class="moon"></div>
+
+  <div class="upper-container">
+    <div class="guardian"></div>
+    <div class="question-frame">
+      <div class="question-box">
+        <div class="key-container">
+          <span class="key-number">0</span>
+          <div class="key-image-count"></div>
+        </div>
+
+        <div class="introduction">
+          <p>Answer the questions correctly to win a key and unlock a chest. There are many friends waiting for you.</p>
+          <span>Enter your name</span><input type="text" name="myname" id="myname" placeholder="name" required>
+          <div id="next" onclick="nextSection()" for="myname">Next</div>
+        </div>
+
+        <div class="questionnaire no-display">
+          <div class="question"></div>
+          <div class="answer-01" onclick="answer(event)"></div>
+          <div class="answer-02" onclick="answer(event)"></div>
+          <div class="answer-03" onclick="answer(event)"></div>
+
+          <div class="key disappear" onclick="disappear(event)">
+            <div class="key-image"></div>
+          </div>
+
+          <div class="next disappear" onclick="nextQuestion(event)">Next</div>
+
+          <div class="retry disappear" onclick="retry(event)">Retry</div>
+        </div>
+
+      </div>
     </div>
-  </body>
+  </div>
+
+  <div class="wheel">
+    <span class="line"></span>
+    <span class="line"></span>
+    <span class="line"></span>
+    <span class="line"></span>
+    <span class="line"></span>
+    <span class="line"></span>
+
+    <div class="cabin" id="cabin-01" onclick="background(event)"></div>
+    <div class="cabin" id="cabin-02" onclick="background(event)"></div>
+    <div class="cabin" id="cabin-03" onclick="background(event)"></div>
+    <div class="cabin" id="cabin-04" onclick="background(event)"></div>
+    <div class="cabin" id="cabin-05" onclick="background(event)"></div>
+    <div class="cabin" id="cabin-06" onclick="background(event)"></div>
+  </div>
+
+  <div class="friends-container">
+    <div class="friend-container">
+      <div class="friend-01"></div>
+    </div>
+    <div class="friend-container">
+      <div class="friend-02"></div>
+    </div>
+    <div class="friend-container">
+      <div class="friend-03"></div>
+    </div>
+    <div class="friend-container">
+      <div class="friend-04"></div>
+    </div>
+    <div class="friend-container">
+      <div class="friend-05"></div>
+    </div>
+    <div class="friend-container">
+      <div class="friend-06"></div>
+    </div>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+
 </html>

@@ -29,12 +29,14 @@
           <div class="key-image-count-background"></div>
         </div>
 
-        <!-- <div class="introduction">
+        <div class="introduction">
           <p>Answer the questions correctly to win keys and unlock the chests. There are many friends waiting for you!
           </p>
-          <span>Enter your name</span><input type="text" name="myname" id="myname" placeholder="name">
-          <div class="next-background"></div>
-          <div id="next" onclick="nextSection()" for="myname">Next</div>
+          <span>Enter your name</span><input type="text" name="myname" id="myname" placeholder="name" onchange="showNext(event)">
+          <div class="next-container disappear">
+            <div class="next-background"></div>
+            <div id="next" onclick="nextSection()">Next</div>
+          </div>
         </div>
 
         <div class="questionnaire no-display">
@@ -48,16 +50,19 @@
         </div>
 
         <div class="results">
-          <div class="key disappear" onclick="disappear(event)">
+          <div class="no-display key" onclick="disappear(event)">
             <div class="key-image"></div>
             <div class="key-image-background"></div>
           </div>
-          <div class="next disappear" onclick="nextQuestion(event)">Next</div>
-          <div class="retry disappear" onclick="retry(event)">Retry</div>
-        </div> -->
+          <div class="next no-display" onclick="nextQuestion(event)">
+            <span>Next</span>
+            <div class="next-background"></div>
+          </div>
+          <div class="retry no-display" onclick="retry(event)">Retry</div>
+        </div>
 
-        <div class="congratulations">
-          <p>Congratulations <br> <span>name</span>, <br>thank you for your help!</p>
+        <div class="congratulations no-display">
+          <p>Congratulations <br> <span class="congratulations-name">name</span>, <br>thank you for your help!</p>
           <div class="congratulations-background"></div>
         </div>
         
@@ -82,22 +87,22 @@
   </div>
 
   <div class="friends-container">
-    <div class="friend-container">
+    <div class="friend-container first">
       <div class="friend-01"></div>
     </div>
-    <div class="friend-container">
+    <div class="friend-container second">
       <div class="friend-02"></div>
     </div>
-    <div class="friend-container">
+    <div class="friend-container third">
       <div class="friend-03"></div>
     </div>
-    <div class="friend-container">
+    <div class="friend-container fourth">
       <div class="friend-04"></div>
     </div>
-    <div class="friend-container">
+    <div class="friend-container fifth">
       <div class="friend-05"></div>
     </div>
-    <div class="friend-container">
+    <div class="friend-container sixth">
       <div class="friend-06"></div>
     </div>
   </div>

@@ -80,6 +80,7 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
+  height: 100%;
 }
 
 .introduction p {
@@ -120,10 +121,6 @@ body {
   justify-content: center;
   align-items: center;
   position: relative;
-}
-
-.no-display {
-  display: none;
 }
 
 .congratulations {
@@ -181,8 +178,10 @@ body {
 }
 
 input {
+  width: 12vw;
+  height: 1.3vw;
   margin-top: 0.4vw;
-  margin-bottom: 2vw;
+  margin-bottom: 1.5vw;
   font-family: 'Satisfy', cursive;
   font-style: italic;
   text-align: center;
@@ -191,7 +190,17 @@ input {
   box-shadow: 0px 3px 5px rgb(182, 182, 182);
 }
 
+.next-container {
+  width: 20%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 #next {
+  margin-bottom: 0.8vw;
+  margin-right: 0.3vw;
   width: 20%;
   height: 20%;
   cursor: pointer;
@@ -214,8 +223,6 @@ input {
   background-repeat: no-repeat;
   background-position: center;
   position: absolute;
-  bottom: 4.5vw;
-  z-index: 0;
   animation: 10s linear infinite wheel;
 }
 
@@ -275,10 +282,6 @@ input {
   animation: 10s linear infinite wheel;
 }
 
-.disappear {
-  opacity: 0%;
-}
-
 .key {
   width: 100%;
   height: 90%;
@@ -316,13 +319,39 @@ input {
 
 .next {
   position: absolute;
+  width: 15%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 300ms ease-in-out;
+  cursor: pointer;
+  color: rgb(162, 132, 170);
+}
+
+.next:hover {
+  color: rgb(101, 67, 110);
+}
+
+.next span {
+  z-index: 2;
 }
 
 .retry {
   position: absolute;
-  width: 50%;
-  height: 100%;
-  background-color: red;
+  width: 15%;
+  height: 80%;
+  color: rgb(85, 24, 24);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 300ms ease-in-out;
+  cursor: pointer;
+}
+
+.retry:hover {
+  color: rgb(255, 255, 255);
+  text-shadow: 0px 0px 10px rgb(154, 15, 15);
 }
 
 .answers {
@@ -360,11 +389,23 @@ input {
   color: white;
 }
 
+.no-hover {
+  pointer-events: none;
+}
+
 .incorrect {
   box-shadow: 0px 0px 10px rgb(174, 110, 110);
   background-color: rgb(101, 54, 54);
   border: 3px solid rgb(143, 93, 93);
   color: white;
+}
+
+.incorrect:hover {
+  transform: scale(105%);
+  box-shadow: 0px 0px 10px rgb(174, 110, 110);
+  background-color: rgb(143, 93, 93);
+  border: 3px solid rgb(101, 54, 54);
+  color: rgb(48, 15, 15);
 }
 
 /* Questions END */
@@ -474,7 +515,6 @@ input {
 .friend-container {
   height: 100%;
   width: 15%;
-  background-image: url(Images/Card.png);
   background-size: contain;
   background-repeat: no-repeat;
   display: flex;
@@ -495,6 +535,30 @@ input {
   margin-bottom: 0vw;
   filter: contrast(0%);
   transition: all 500ms ease-in-out;
+}
+
+.first {
+  background-image: url(Images/Card_Odine.png);
+}
+
+.second {
+  background-image: url(Images/Card_Aisling.png);
+}
+
+.third {
+  background-image: url(Images/Card_Ellide.png);
+}
+
+.fourth {
+  background-image: url(Images/Card_Migine.png);
+}
+
+.fifth {
+  background-image: url(Images/Card_Illayda.png);
+}
+
+.sixth {
+  background-image: url(Images/Card_WillaRose.png);
 }
 
 .light {
@@ -534,6 +598,14 @@ input {
 }
 
 /* Friends END */
+
+.no-display {
+  display: none;
+}
+
+.disappear {
+  opacity: 0%;
+}
 
 /* Animations */
 

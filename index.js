@@ -30,21 +30,27 @@ function showNext(event) {
     }
 }
 
+// This function is called when the user clicks the "Next" button on the introduction section
 function nextSection(event) {
-
+    // Get the user's name from the input field with ID "myname"
     user = document.querySelector("#myname").value;
 
+    // Hide the introduction section by adding the "no-display" class to its element
     document.querySelector(".introduction").classList.add("no-display");
 
+    // Set the question text and answer choices for the questionnaire section
     document.querySelector(".question").innerHTML = "How many Wonders of the World are there?";
     document.querySelector(".answer-01").innerHTML = "6";
     document.querySelector(".answer-02").innerHTML = "8";
     document.querySelector(".answer-03").innerHTML = "7";
 
+    // Set the correct answer for the question
     correctanswer = "answer-03";
 
+    // Show the questionnaire section by removing the "no-display" class from its element
     document.querySelector(".questionnaire").classList.remove("no-display");
 }
+
 
 function answer(event) {
 
